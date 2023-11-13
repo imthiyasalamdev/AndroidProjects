@@ -1,0 +1,17 @@
+<resources>
+    <string name="result">Result</string>
+    <string name="app_name">Trivia Quiz App</string>
+    <string name="start_quiz">Start Quiz</string>
+    <string name="result_score">Your Score: %d</string>
+    <string name="welcome_to_triviaquiz">Welcome To TriviaQuiz</string>
+    <string name="get_started">Get Started</string>
+    <string name="don_t_have_an_account_sign_up">Don\'t have an account? Sign Up</string>
+    <string name="login">Login</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="submit">Submit</string>
+    <string name="questions">Questions</string>
+    <string name="already_have_an_account_login">Already have an account? Login</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="password_">Password</string>
+</resources>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "842725745897",
+    "project_id": "profilemate-382d2",
+    "storage_bucket": "profilemate-382d2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:842725745897:android:d8ab0d32a9549ae827fc78",
+        "android_client_info": {
+          "package_name": "com.example.profilemate"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBH9J9I8w7Fk87uTgDZIUooYxsJasu2OT4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

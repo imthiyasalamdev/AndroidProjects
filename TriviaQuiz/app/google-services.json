@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "485735845186",
+    "project_id": "quoteapp-30967",
+    "storage_bucket": "quoteapp-30967.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:485735845186:android:219c40daed3621da4b0cdb",
+        "android_client_info": {
+          "package_name": "com.example.quoteapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "485735845186-5fhbmie74tb9gh0ro5eil7gfi2flktag.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5sovIMQCCsTKAOEA4rFig9fP4Fvp2rMA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "485735845186-5fhbmie74tb9gh0ro5eil7gfi2flktag.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:485735845186:android:d9085c7f598f62474b0cdb",
+        "android_client_info": {
+          "package_name": "com.example.triviaquiz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "485735845186-5fhbmie74tb9gh0ro5eil7gfi2flktag.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5sovIMQCCsTKAOEA4rFig9fP4Fvp2rMA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "485735845186-5fhbmie74tb9gh0ro5eil7gfi2flktag.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
