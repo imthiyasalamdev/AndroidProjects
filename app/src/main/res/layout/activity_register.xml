@@ -13,6 +13,7 @@
         android:layout_height="wrap_content"
         android:text="Registration"
         android:textSize="24sp"
+        android:textAllCaps="true"
         android:textStyle="bold"
         android:layout_marginTop="100dp"
         android:layout_marginBottom="24dp"
@@ -20,17 +21,17 @@
 
     <EditText
         android:id="@+id/nameEditText"
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:hint="Name"
-        android:height="50dp"
         android:padding="16dp"
+        android:height="50dp"
         android:layout_marginBottom="16dp"
         android:background="@drawable/edit_text_background"/>
 
     <EditText
         android:id="@+id/emailEditText"
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:hint="Email"
         android:height="50dp"
@@ -40,7 +41,7 @@
 
     <EditText
         android:id="@+id/mobileEditText"
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:hint="Mobile"
         android:height="50dp"
@@ -54,6 +55,7 @@
         android:layout_height="wrap_content"
         android:text="Register"
         android:textSize="20dp"
+        android:height="50dp"
         android:layout_marginTop="20dp"
         android:background="@drawable/button_background"/>
 </LinearLayout>

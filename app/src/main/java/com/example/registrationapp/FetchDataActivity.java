@@ -2,7 +2,9 @@ package com.example.registrationapp;
 
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,15 +22,18 @@ import java.net.URL;
 
 public class FetchDataActivity extends AppCompatActivity {
 
-    private LinearLayout linearLayout;
+    private ProgressBar progressBar;
+    private LinearLayout contentLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fetch_data);
 
-        linearLayout = findViewById(R.id.fetchDataLinearLayout);
+        progressBar = findViewById(R.id.progressBar);
+        contentLayout = findViewById(R.id.contentLayout);
 
+        // Start AsyncTask to fetch data
         FetchDataTask fetchDataTask = new FetchDataTask();
         fetchDataTask.execute("https://jsonplaceholder.typicode.com/posts");
     }
@@ -74,6 +79,10 @@ public class FetchDataActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(String s) {
             super.onPostExecute(s);
+            progressBar.setVisibility(View.GONE); // Hide progress bar
+            contentLayout.setVisibility(View.VISIBLE); // Show content layout
+
+            // Process fetched data and update UI
             if (s != null) {
                 try {
                     JSONArray jsonArray = new JSONArray(s);
@@ -82,18 +91,39 @@ public class FetchDataActivity extends AppCompatActivity {
                         String title = jsonObject.getString("title");
                         String body = jsonObject.getString("body");
 
-                        TextView titleTextView = new TextView(FetchDataActivity.this);
-                        titleTextView.setText("Title: " + title);
-                        linearLayout.addView(titleTextView);
-
-                        TextView bodyTextView = new TextView(FetchDataActivity.this);
-                        bodyTextView.setText("Body: " + body);
-                        linearLayout.addView(bodyTextView);
+                        // Create a content block for each item
+                        addContentBlock(title, body);
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
             }
+        }
+
+        private void addContentBlock(String title, String body) {
+            // Create a new content block
+            View contentBlock = getLayoutInflater().inflate(R.layout.content_block, contentLayout, false);
+
+            // Set title (bold) and body
+            TextView titleTextView = contentBlock.findViewById(R.id.titleTextView);
+            titleTextView.setText(title);
+
+            TextView bodyTextView = contentBlock.findViewById(R.id.bodyTextView);
+            bodyTextView.setText(body);
+
+            // Add to content layout with separator
+            contentLayout.addView(contentBlock);
+            addSeparator();
+        }
+
+        private void addSeparator() {
+            View separator = new View(FetchDataActivity.this);
+            separator.setLayoutParams(new LinearLayout.LayoutParams(
+                    LinearLayout.LayoutParams.MATCH_PARENT,
+                    2 // Height of separator
+            ));
+            separator.setBackgroundColor(getResources().getColor(android.R.color.darker_gray));
+            contentLayout.addView(separator);
         }
     }
 }
