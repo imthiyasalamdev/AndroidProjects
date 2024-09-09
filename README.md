@@ -16,9 +16,6 @@ A simple registration and login app with an SQLite database. Users can create ac
 ### 4. **TriviaQuizApp**
 A fun trivia quiz app that tests the user's knowledge across various topics. The app features a dynamic question bank, score tracking, and a time-based quiz format. Built with engaging UI/UX, it provides instant feedback on user answers and tracks progress.
 
-### 5. **PhoneApp**
-A comprehensive contact management and call logging app. It uses an SQLite database to store contacts locally and Firebase for cloud synchronization. The app includes features like call detection, user profile management, and detailed call history.
-
 ---
 
 ## How to Run the Projects
